@@ -1,0 +1,28 @@
+<mat-toolbar color="primary"> <span class="title-center">College Details</span> </mat-toolbar>
+
+<nav class="navbar">
+  <input class="form-control" type="text" name="collegename" [(ngModel)]="name" (ngModelChange)="Search()"
+  placeholder="Enter college name to search">
+</nav>
+<div style="padding-top: 50px;">
+  <table id="table">
+    <thead>
+      <tr>
+        <th>College Name</th>
+        <th>Founded In</th>
+        <th>State</th>
+        <th>City</th>
+        <th>Facilities</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let college of colleges">
+        <td>{{college.name}}</td>
+        <td>{{college.year_founded}}</td>
+        <td>{{college.state}}</td>
+        <td>{{college.city}}</td>
+        <td>{{college.facilities}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
